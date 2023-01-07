@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import AdminScreen from "./screens/AdminScreen";
+import DestScreen from "./screens/DestScreen";
+import HomeScreen from "./screens/HomeScreen";
+import MerchScreen from "./screens/MerchScreen";
+import TravelScreen from "./screens/TravelScreen";
+import VideoScreen from "./screens/VideoScreen";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/admin" element={<AdminScreen />} />
+        <Route path="/travel-plans" element={<DestScreen />} />
+        <Route path="/store" element={<MerchScreen />} />
+        <Route path="/dee-lightful-destinations" element={<TravelScreen />} />
+        <Route path="/adventures" element={<VideoScreen />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

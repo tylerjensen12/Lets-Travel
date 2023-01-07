@@ -1,0 +1,44 @@
+header {
+  height: 6.25rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 1.875rem;
+  background-color: black;
+}
+
+.logo {
+  height: 4.69em;
+  width: 4.69em;
+  border-radius: 1.19rem;
+}
+
+.header {
+  height: 4.69rem;
+}
+
+nav {
+  position: absolute;
+  height: 100vh;
+  width: 300px;
+  background-color: #76488576;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px;
+  gap: 20px;
+}
+
+.showMenu {
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.hideMenu {
+  right: -350px;
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
