@@ -1,12 +1,13 @@
 import React from "react";
+import Login from "../components/Login";
 
 const AdminScreen = () => {
   return (
     <div>
       <h1>Admin</h1>
-      <form></form>
+      <Login />
     </div>
   );
 };
 
-export default AdminScreen
+export default AdminScreen;

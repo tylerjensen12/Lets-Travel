@@ -1,22 +1,22 @@
 header {
-  height: 6.25rem;
-  width: 100vw;
+  height: 14vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0rem 1.875rem;
+  padding: 0 2.5vw;
   background-color: black;
 }
 
 .logo {
-  height: 4.69em;
-  width: 4.69em;
+  height: 11vh;
+  width: 11vh;
   border-radius: 1.19rem;
 }
 
 .header {
-  height: 4.69rem;
+  height: 75%;
+  width: 36%;
 }
 
 nav {

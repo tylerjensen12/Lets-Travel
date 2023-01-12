@@ -1,5 +1,37 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 12px;
+}
+
+.home {
+  padding: 0 5vw;
+}
+
+.paragraph {
+  width: 75%;
+  margin: auto;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vw;
+  margin: 5vh 0;
+}
+
+.box {
+  width: 35vw;
+  height: 35vw;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -13,9 +13,12 @@
     * id
     * title
     * video-url
-- item 
+<!-- - item 
     * id
     * item-title
     * price
     * image
-    
+     -->
+
+# Wireframes
+- https://www.figma.com/file/r1hQOOTyFKG6mzqPJfEX2c/ParoDeeJay?node-id=0%3A1&t=scCfiZanqvx7UdPo-0
