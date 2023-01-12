@@ -14,27 +14,32 @@ const Header = () => {
         <img src={logo} alt="logo" className={style.logo} />
       </Link>
       <img src={header} alt="ParoDeeJay" className={style.header} />
-      <BiMenu
-        size="50px"
-        color="white"
-        style={{ zIndex: 3 }}
-        onClick={handleMenu}
-      />
+      <BiMenu className={style.menu} onClick={handleMenu} />
       <nav className={showMenu ? style.showMenu : style.hideMenu}>
         <Link to="/">
-          <button onClick={handleMenu}>Home</button>
+          <button onClick={handleMenu} className={style.navbtn}>
+            Home
+          </button>
         </Link>
         <Link to="/adventures">
-          <button onClick={handleMenu}>Adventures</button>
+          <button onClick={handleMenu} className={style.navbtn}>
+            Adventures
+          </button>
         </Link>
         <Link to="/travel-plans">
-          <button onClick={handleMenu}>Travel Plans</button>
+          <button onClick={handleMenu} className={style.navbtn}>
+            Travel Plans
+          </button>
         </Link>
         <Link to="/dee-lightful-destinations">
-          <button onClick={handleMenu}>Dee-Lightful Destinations</button>
+          <button onClick={handleMenu} className={style.navbtn}>
+            Dee-Lightful Destinations
+          </button>
         </Link>
         <Link to="/store">
-          <button onClick={handleMenu}>Store</button>
+          <button onClick={handleMenu} className={style.navbtn}>
+            Store
+          </button>
         </Link>
       </nav>
     </header>

@@ -35,3 +35,47 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+.travel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+}
+
+.travel h1 {
+  font-size: 64px;
+  color: #150a39;
+}
+
+.travel img {
+  height: 15vh;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 85%;
+  gap: 2vh;
+}
+
+.intro {
+  display: flex;
+}
+
+.intro img {
+  height: 15vh;
+  margin: 0 3vw;
+  border-radius: 7px;
+}
+
+.itinerary {
+  margin: 4vh;
+}
+
+.itinerary img {
+  height: 30vh;
+}
