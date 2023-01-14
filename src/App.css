@@ -79,3 +79,12 @@ p {
 .itinerary img {
   height: 30vh;
 }
+
+.videos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: #5730d5;
+}

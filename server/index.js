@@ -3,6 +3,8 @@ const cors = require("cors");
 const db = require("./util/database");
 const { User, Video } = require("./util/models");
 const seed = require("./util/seed");
+const {getAllVids} = require('./controllers/video')
+const {register, login} = require('./controllers/user')
 
 const server = express();
 
@@ -12,19 +14,14 @@ server.use(cors());
 User.hasMany(Video);
 Video.belongsTo(User);
 
-server.get("/api/user/:id", async (req, res) => {
-  const { id } = req.params;
-  try {
-    let info = await User.findOne({ where: { id } });
-    res.status(200).send(info);
-  } catch {
-    res.status(400).send("could not complete");
-  }
-});
+server.get('/api/allvideos', getAllVids)
+server.post("/api/register", register);
+server.post("/api/login", login);
 
 db
-.sync()
+// .sync()
 // .sync({force: true})
 // .then(() => seed());
 
-server.listen(4000, () => console.log('Server is running on 4000'))
+const {PORT} = process.env
+server.listen(PORT, () => console.log(`Server is running on ${PORT}`))
