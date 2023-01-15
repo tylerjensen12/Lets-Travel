@@ -14,7 +14,7 @@ module.exports = {
       const salt = bcrypt.genSaltSync(10);
       const hashPass = bcrypt.hashSync(password, salt);
 
-      const newAdmin = await User.create({
+      await User.create({
         username,
         password: hashPass,
         admin: false,

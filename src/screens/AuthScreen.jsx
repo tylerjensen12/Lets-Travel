@@ -31,8 +31,8 @@ const AuthScreen = () => {
       <h1>Auth</h1>
       <h1>{register ? "Register" : "Login"}</h1>
       <form onSubmit={handleSubmit}>
-        <input placeholder="Username" ref={nameRef} />
-        <input placeholder="Password" ref={passRef} />
+        <input type='text' placeholder="Username" ref={nameRef} />
+        <input type='password' placeholder="Password" ref={passRef} />
         <button>{register ? "Register" : "Login"}</button>
       </form>
       <button onClick={toggle}>

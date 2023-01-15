@@ -7,12 +7,12 @@
     width: 30vh;
     color: white;
     background-color: rgb(183, 151, 151);
-    /* width: 20vw; */
+    border-radius: 10px;
 }
 
 .video {
     height: 20vh;
-    width: 18vw;
+    width: 30vh;
     border: none;
     border-radius: 10px 10px 0 0;
 }
