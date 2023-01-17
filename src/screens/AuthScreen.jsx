@@ -24,7 +24,10 @@ const AuthScreen = () => {
         dispatch({ type: "LOGIN", payload: res.data });
       })
       .catch((err) => console.error(err));
-  };
+
+      nameRef.current.value = ''
+      passRef.current.value = ''
+    };
 
   return (
     <div>

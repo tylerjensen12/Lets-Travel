@@ -23,8 +23,20 @@ module.exports = {
     url: DataTypes.STRING,
     title: DataTypes.STRING,
     description: DataTypes.STRING,
-    adventure: DataTypes.BOOLEAN,
-    ports: DataTypes.BOOLEAN,
+    adventure: DataTypes.STRING,
+    ports: DataTypes.STRING,
+  }),
+  Trip: db.define("trip", {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false,
+      autoIncrement: true,
+    },
+    date: DataTypes.DATEONLY,
+    ship: DataTypes.STRING,
+    length: DataTypes.INTEGER,
+    place: DataTypes.STRING,
   }),
   /*
   Picture:db.define("picture", {

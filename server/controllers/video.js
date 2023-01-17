@@ -12,11 +12,11 @@ module.exports = {
     }
   },
   adventureVideo: async (req, res) => {
-    try{
+    try {
       const advVid = await Video.findAll({
-        where: {adventure: true},
-        order: [['id', 'DESC']]
-      })
+        where: { adventure: "adventure" },
+        order: [["id", "DESC"]],
+      });
       res.status(200).send(advVid);
     } catch (err) {
       res.status(400).send(err);
@@ -25,8 +25,8 @@ module.exports = {
   portVideo: async (req, res) => {
     try {
       const portVid = await Video.findAll({
-        where: { ports: true },
-        order: [['id', 'DESC']]
+        where: { ports: "port" },
+        order: [["id", "DESC"]],
       });
       res.status(200).send(portVid);
     } catch (err) {

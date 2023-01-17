@@ -46,7 +46,7 @@ const VideoScreen = () => {
     getPortVideos();
   }, []);
 
-  const latest = allVids.slice(0, 4);
+  const latest = allVids.slice(0, 8);
   const adventure = adv.slice(0, 4);
   const ports = port.slice(0, 4);
 
