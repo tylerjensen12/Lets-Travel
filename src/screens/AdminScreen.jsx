@@ -56,6 +56,13 @@ const AdminScreen = () => {
       .then((res) => console.log(res))
       .catch((err) => console.error(err));
 
+
+      Swal.fire({
+        html: `<h3>New Trip submitted!</h3>`,
+        confirmButtonColor: "#7fe07f",
+        color: "#150a39",
+      });
+
     dateRef.current.value = "";
     shipRef.current.value = "";
     lengthRef.current.value = "";
@@ -98,7 +105,7 @@ const AdminScreen = () => {
         <form onSubmit={addTrip}>
           <input type="date" placeholder="Cruise - Date" ref={dateRef} />
           <input type="text" placeholder="Cruise Ship" ref={shipRef} />
-          <input type="number" placeholder="Length" ref={lengthRef} />
+          <input type="number" placeholder="Duration" ref={lengthRef} />
           <input type="text" placeholder="Place" ref={placeRef} />
           <button>Add</button>
         </form>

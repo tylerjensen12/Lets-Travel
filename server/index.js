@@ -5,7 +5,7 @@ const { User, Video } = require("./util/models");
 const seed = require("./util/seed");
 const {getAllVids, newVideo, portVideo, adventureVideo} = require('./controllers/video')
 const {register, login} = require('./controllers/user')
-const {addTrip} = require('./controllers/trip')
+const {addTrip, getTrip} = require('./controllers/trip')
 
 const server = express();
 
@@ -22,6 +22,7 @@ server.post('/api/newvideo', newVideo)
 server.post("/api/register", register);
 server.post("/api/login", login);
 server.post('/api/addtrip', addTrip)
+server.get('/api/gettrip', getTrip)
 
 db
 // .sync()

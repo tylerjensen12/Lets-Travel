@@ -1,4 +1,4 @@
-const {Trip} = require('../util/models')
+const { Trip } = require("../util/models");
 
 module.exports = {
   addTrip: async (req, res) => {
@@ -10,6 +10,16 @@ module.exports = {
         length,
         place,
       });
+    } catch (err) {
+      res.status(400).send(err);
+    }
+  },
+  getTrip: async (req, res) => {
+    try {
+      const trips = await Trip.findAll({
+        order: [["date", "ASC"]],
+      });
+      res.status(200).send(trips);
     } catch (err) {
       res.status(400).send(err);
     }

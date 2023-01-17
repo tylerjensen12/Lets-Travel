@@ -10,34 +10,22 @@ const VideoScreen = () => {
   const getAllVideos = () => {
     axios
       .get("/api/allvideos")
-      .then((res) => {
-        setAllVids(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .then(res => setAllVids(res.data))
+      .catch(err => console.error(err));
   };
 
   const getAdvVideos = () => {
     axios
       .get("/api/advvideos")
-      .then((res) => {
-        setAdv(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .then(res => setAdv(res.data))
+      .catch(err => console.error(err));
   };
 
   const getPortVideos = () => {
     axios
       .get("/api/portvideos")
-      .then((res) => {
-        setPort(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .then(res => setPort(res.data))
+      .catch(err => console.error(err));
   };
 
   useEffect(() => {
