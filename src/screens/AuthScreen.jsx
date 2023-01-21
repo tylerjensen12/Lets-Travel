@@ -31,16 +31,16 @@ const AuthScreen = () => {
 
   return (
     <div>
-      <h1>Auth</h1>
+      {/* <h1>Auth</h1> */}
       <h1>{register ? "Register" : "Login"}</h1>
       <form onSubmit={handleSubmit}>
         <input type='text' placeholder="Username" ref={nameRef} />
         <input type='password' placeholder="Password" ref={passRef} />
-        <button>{register ? "Register" : "Login"}</button>
+        <button className="btn">{register ? "Register" : "Login"}</button>
       </form>
-      <button onClick={toggle}>
+      <button onClick={toggle} className='btn'>
         Need to {!register ? "Register" : "Login"}?
-      </button>{" "}
+      </button>
     </div>
   );
 };

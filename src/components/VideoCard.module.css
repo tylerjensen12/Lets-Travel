@@ -1,18 +1,53 @@
 .video_card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    height: 30vh;
-    width: 30vh;
-    color: white;
-    background-color: rgb(183, 151, 151);
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  height: 30vh;
+  width: 30vh;
+  color: white;
+  background-color: #09c6aa;
+  border-radius: 10px;
 }
 
 .video {
-    height: 20vh;
-    width: 30vh;
-    border: none;
-    border-radius: 10px 10px 0 0;
+  height: 20vh;
+  width: 30vh;
+  border: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.video_card_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 27vw;
+  width: 35vw;
+  color: white;
+  background-color: #09c6aa;
+  border-radius: 15px;
+  box-shadow: 2px 2px 7px #b4c2ff;
+}
+
+.video_main {
+  height: 20vw;
+  width: 35vw;
+  border: none;
+  border-radius: 15px 15px 0 0;
+}
+
+span {
+  /* background-image: url("../pictures/ncl-breakaway.jpg"), linear-gradient(to bottom rgba(0, 0, 0, 0.556)); */
+  background-image: linear-gradient(to bottom, #ff8800, #7b00ff, #00f7ff);
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 27vw;
+  width: 35vw;
+  color: white;
+  border-radius: 15px;
+  font-size: 36px;
+  box-shadow: 2px 2px 7px #b4c2ff;
 }

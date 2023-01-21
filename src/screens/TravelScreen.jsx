@@ -12,7 +12,7 @@ const TravelScreen = () => {
     color: "#150a39",
   });
   return (
-    <div>
+    <div className="body">
       <div className="travel">
         <h1>Dee-Lightful Destinations</h1>
         <img src={turtle} alt="turtle" />

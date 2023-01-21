@@ -28,20 +28,26 @@ p {
 }
 
 .box {
-  width: 35vw;
-  height: 35vw;
-  background-color: aliceblue;
+  /* width: 35vw;
+  height: 35vw; */
+  /* background-color: rgb(138, 190, 235); */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .travel {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 1%;
+    margin: auto;
+}
+
+.body {
+  height: 85vh;
 }
 
 .travel h1 {
@@ -89,7 +95,44 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   padding: 15px;
-  background-color: #5730d5;
+  background-color: #5927ff;
+  margin: 15px 0;
+}
+
+.btn {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  color: white;
+  background-color: #5927ff;
+  border-radius: 17px;
+  height: 35px;
+  width: 150px;
+  font-weight: bolder;
+}
+
+.btn:hover {
+  background-color: #3a00fb;
+  cursor: pointer;
+  box-shadow: 2px 2px 7px #b4c2ff;
+}
+
+.radios {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+h1 {
+  margin-left: 3vw;
+}
+
+.admin {
+  width: 95vw;
+  margin: auto;
 }

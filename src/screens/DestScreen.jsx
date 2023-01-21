@@ -11,7 +11,16 @@ const DestScreen = () => {
   const getTrips = () => {
     axios
       .get("/api/gettrip")
-      .then(res => setTrip(res.data))
+      .then(res => {
+        setTrip(res.data)
+        Swal.fire({
+          title: "Join A Future ParoDeeJay Cruise!",
+          html: `Here's a list of future adventures we have plotted! These are not traditional "group cruises", but if you'd like to join one of these cruises, click the link above to submit a request for a quote, and I'll be glad to get you onboard!</br></br>Check out our "ParoDeeJay Shenanigans Squad" Facebook group or find us on the ShipMate app for the latest, greatest list of our upcoming adventures!!<a href="https://www.facebook.com/groups/parodeejay/" target="_blank" rel="noreferrer">
+          Facebook: ParoDeeJay Shenanigans Squad</a>`,
+          color: "#150a39",
+          confirmButtonColor: "#7fe07f",
+        });
+      })
       .catch(err => console.error(err));
   };
 
@@ -24,13 +33,7 @@ const DestScreen = () => {
     return <TripCard key={id} trip={trip} />;
   });
 
-  Swal.fire({
-    title: "Join A Future ParoDeeJay Cruise!",
-    html: `Here's a list of future adventures we have plotted! These are not traditional "group cruises", but if you'd like to join one of these cruises, click the link above to submit a request for a quote, and I'll be glad to get you onboard!</br></br>Check out our "ParoDeeJay Shenanigans Squad" Facebook group or find us on the ShipMate app for the latest, greatest list of our upcoming adventures!!<a href="https://www.facebook.com/groups/parodeejay/" target="_blank" rel="noreferrer">
-    Facebook: ParoDeeJay Shenanigans Squad</a>`,
-    color: "#150a39",
-    confirmButtonColor: "#7fe07f",
-  });
+  
   return (
     <div className="itinerary">
       <h1>Group Cruise - January 2023</h1>

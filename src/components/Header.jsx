@@ -36,11 +36,11 @@ const Header = () => {
             Dee-Lightful Destinations
           </button>
         </Link>
-        <Link to="/store">
+        {/* <Link to="/store">
           <button onClick={handleMenu} className={style.navbtn}>
             Store
           </button>
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );

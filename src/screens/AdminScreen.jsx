@@ -23,8 +23,8 @@ const AdminScreen = () => {
       url: linkRef.current.value,
       title: nameRef.current.value,
       description: infoRef.current.value,
-      adventure: false,
-      ports: false,
+      adventure: 'adventure',
+      ports: '',
     };
     axios
       .post("api/newvideo", body)
@@ -70,7 +70,7 @@ const AdminScreen = () => {
   };
 
   return (
-    <div>
+    <div className="admin">
       <h1>Admin</h1>
       <div>
         <h2>New Video</h2>
@@ -78,12 +78,12 @@ const AdminScreen = () => {
           <input type="text" placeholder="Youtube Link" ref={linkRef} />
           <input type="text" placeholder="Title" ref={nameRef} />
           <input type="text" placeholder="Description" ref={infoRef} />
-          <div>
+          <div className="radios">
             <input
               type="radio"
               name="vidtype"
               value="adventure"
-              checked="adventures"
+              // checked="adventures"
               // onChange={handleChange}
             />
             Adventures
@@ -91,13 +91,13 @@ const AdminScreen = () => {
               type="radio"
               name="vidtype"
               value="ports"
-              checked="ports"
+              // checked="ports"
               // onChange={handleChange}
             />
             Port Guides
             <input type="radio" name="vidtype" value="n/a" /> N/A
           </div>
-          <button>Submit</button>
+          <button className="btn">Submit</button>
         </form>
       </div>
       <div>
@@ -107,7 +107,7 @@ const AdminScreen = () => {
           <input type="text" placeholder="Cruise Ship" ref={shipRef} />
           <input type="number" placeholder="Duration" ref={lengthRef} />
           <input type="text" placeholder="Place" ref={placeRef} />
-          <button>Add</button>
+          <button className="btn">Add</button>
         </form>
       </div>
     </div>

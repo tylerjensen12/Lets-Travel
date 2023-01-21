@@ -34,9 +34,9 @@ const VideoScreen = () => {
     getPortVideos();
   }, []);
 
-  const latest = allVids.slice(0, 8);
-  const adventure = adv.slice(0, 4);
-  const ports = port.slice(0, 4);
+  const latest = allVids.slice(0, 10);
+  const adventure = adv.slice(0, 5);
+  const ports = port.slice(0, 5);
 
   const latDisplay = latest.map((video, index) => {
     let id = video.id;
